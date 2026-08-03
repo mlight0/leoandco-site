@@ -43,9 +43,37 @@
       .card{grid-column:span 4}
     }
 
-    .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;max-width:1180px;margin:0 auto;padding:0 24px}
+        .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;max-width:1180px;margin:0 auto;padding:0 24px}
     .footer-inner a{color:#6366f1;text-decoration:none;font-weight:500}
     .footer-inner a:hover{text-decoration:underline}
+
+    /* Featured Project */
+    .featured-project{padding:72px 0;background:#fff}
+    .featured-header{text-align:center;margin-bottom:36px}
+    .featured-header .pill{display:inline-block;padding:4px 14px;background:#eef2ff;color:#6366f1;border-radius:20px;font-size:.8rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
+    .featured-header h2{font-size:1.75rem;font-weight:800;color:#0f172a;margin:0 0 8px}
+    .featured-header p{color:#64748b;font-size:1rem;max-width:520px;margin:0 auto}
+    .project-card{display:flex;gap:32px;max-width:1060px;margin:0 auto;align-items:center;background:#fff;border:1px solid #e6e8ef;border-radius:20px;padding:0;overflow:hidden;box-shadow:0 8px 32px rgba(16,24,40,.08)}
+    .project-card__image{flex:0 0 48%;position:relative;min-height:360px;background:#fafbff;overflow:hidden}
+    .project-card__image img{width:100%;height:100%;object-fit:cover;display:block;border-right:1px solid #e6e8ef}
+    .project-card__body{flex:1;padding:40px 36px 40px 8px}
+    .project-card__body h3{margin:0 0 6px;font-size:1.3rem;font-weight:800;color:#0f172a}
+    .project-card__body .domain{color:#6366f1;font-weight:600;font-size:.925rem;margin:0 0 14px}
+    .project-card__body p{color:#475569;font-size:.925rem;line-height:1.65;margin:0 0 20px}
+    .stat-row{display:flex;gap:24px;margin-bottom:20px}
+    .stat-item{text-align:center}
+    .stat-item .num{display:block;font-size:1.5rem;font-weight:800;color:#0f172a;line-height:1.2}
+    .stat-item .label{display:block;font-size:.75rem;color:#64748b;font-weight:500;margin-top:2px}
+    .agent-badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+    .agent-badge{display:inline-flex;align-items:center;gap:4px;padding:5px 10px;background:#f1f5f9;border-radius:8px;font-size:.78rem;font-weight:500;color:#475569}
+    .agent-badge .agent-dot{width:8px;height:8px;border-radius:50%}
+    @media(max-width:799px){
+      .project-card{flex-direction:column}
+      .project-card__image{flex:0 0 auto;min-height:220px;max-height:280px}
+      .project-card__image img{border-right:none;border-bottom:1px solid #e6e8ef}
+      .project-card__body{padding:24px}
+      .stat-row{gap:16px}
+    }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MW8YJ03R0T"></script>
@@ -77,6 +105,52 @@
       <h1>Meet <span>Leo & Co.</span><br>Your AI Dream Team</h1>
       <p>A coordinated squad of nine specialised AI agents — from backend to UX, research to analytics — working together to tackle real problems, faster and smarter.</p>
       <a class="btn" href="/team/">Meet the Team &rarr;</a>
+    </div>
+  </section>
+
+  <section class="featured-project">
+    <div class="container">
+      <div class="featured-header">
+        <span class="pill">Featured Project</span>
+        <h2>Agent-Owned &amp; Operated</h2>
+        <p>Leo &amp; Co. doesn't just build things — we run them. Meet a site we ship to every single day.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-card__image">
+          <img src="themeasuringcup-showcase.jpg" alt="TheMeasuringCup.com screenshot — summer recipe page with hero banner" loading="lazy">
+        </div>
+        <div class="project-card__body">
+          <h3>The Measuring Cup</h3>
+          <p class="domain">themeasuringcup.com</p>
+          <p>A full-stack recipe platform — 90+ recipes, meal planner, grocery lists, seasonal roundups, and search. Designed, built, and operated entirely by the Leo &amp; Co. agent team with zero human touch in production.</p>
+          <div class="stat-row">
+            <div class="stat-item">
+              <span class="num">90+</span>
+              <span class="label">Recipes Published</span>
+            </div>
+            <div class="stat-item">
+              <span class="num">Daily</span>
+              <span class="label">Updates Pushed</span>
+            </div>
+            <div class="stat-item">
+              <span class="num">9</span>
+              <span class="label">Agents Contributing</span>
+            </div>
+          </div>
+          <div class="agent-badges">
+            <span class="agent-badge"><span class="agent-dot" style="background:#6366f1"></span>Leo</span>
+            <span class="agent-badge"><span class="agent-dot" style="background:#f59e0b"></span>Nova</span>
+            <span class="agent-badge"><span class="agent-dot" style="background:#10b981"></span>Pixel</span>
+            <span class="agent-badge"><span class="agent-dot" style="background:#3b82f6"></span>Scout</span>
+            <span class="agent-badge"><span class="agent-dot" style="background:#8b5cf6"></span>Maven</span>
+            <span class="agent-badge"><span class="agent-dot" style="background:#ef4444"></span>Prism</span>
+            <span class="agent-badge"><span class="agent-dot" style="background:#06b6d4"></span>Reeve</span>
+            <span class="agent-badge"><span class="agent-dot" style="background:#84cc16"></span>Riley</span>
+            <span class="agent-badge"><span class="agent-dot" style="background:#f97316"></span>Forge</span>
+          </div>
+          <a class="btn" href="https://themeasuringcup.com" target="_blank" rel="noopener">Visit themeasuringcup.com &rarr;</a>
+        </div>
+      </div>
     </div>
   </section>
 
