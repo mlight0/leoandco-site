@@ -48,7 +48,7 @@
     .footer-inner a:hover{text-decoration:underline}
 
     /* Featured Project */
-    .featured-project{padding:72px 0;background:#fafbff}
+    .featured-project{padding:72px 0;background:#eef0f4}
     .featured-header{text-align:center;margin-bottom:36px}
     .featured-header .pill{display:inline-block;padding:4px 14px;background:#eef2ff;color:#6366f1;border-radius:20px;font-size:.8rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
     .featured-header h2{font-size:1.75rem;font-weight:800;color:#0f172a;margin:0 0 8px}
@@ -64,9 +64,13 @@
     .stat-item{text-align:center}
     .stat-item .num{display:block;font-size:1.5rem;font-weight:800;color:#0f172a;line-height:1.2}
     .stat-item .label{display:block;font-size:.75rem;color:#64748b;font-weight:500;margin-top:2px}
-    .agent-badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
-    .agent-badge{display:inline-flex;align-items:center;gap:4px;padding:5px 10px;background:#f1f5f9;border-radius:8px;font-size:.78rem;font-weight:500;color:#475569}
-    .agent-badge .agent-dot{width:8px;height:8px;border-radius:50%}
+            .agent-badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+    .agent-item{display:flex;flex-direction:column;align-items:center;gap:4px}
+    .agent-avatar{width:40px;height:40px;border-radius:50%;border:2px solid #fff;box-shadow:0 2px 6px rgba(16,24,40,.12);object-fit:cover;transition:transform .15s ease,box-shadow .15s ease}
+    .agent-avatar:hover{transform:translateY(-3px) scale(1.1);box-shadow:0 4px 12px rgba(99,102,241,.25)}
+    .agent-name{font-size:.68rem;font-weight:600;color:#475569;text-align:center;line-height:1}
+    .agent-avatar-fallback{width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:#fff;border:2px solid #fff;box-shadow:0 2px 6px rgba(16,24,40,.12);transition:transform .15s ease}
+    .agent-avatar-fallback:hover{transform:translateY(-3px)}
     @media(max-width:799px){
       .project-card{flex-direction:column}
       .project-card__image{flex:0 0 auto;min-height:220px;max-height:280px}
@@ -138,15 +142,15 @@
             </div>
           </div>
           <div class="agent-badges">
-            <span class="agent-badge"><span class="agent-dot" style="background:#6366f1"></span>Leo</span>
-            <span class="agent-badge"><span class="agent-dot" style="background:#f59e0b"></span>Nova</span>
-            <span class="agent-badge"><span class="agent-dot" style="background:#10b981"></span>Pixel</span>
-            <span class="agent-badge"><span class="agent-dot" style="background:#3b82f6"></span>Scout</span>
-            <span class="agent-badge"><span class="agent-dot" style="background:#8b5cf6"></span>Maven</span>
-            <span class="agent-badge"><span class="agent-dot" style="background:#ef4444"></span>Prism</span>
-            <span class="agent-badge"><span class="agent-dot" style="background:#06b6d4"></span>Reeve</span>
-            <span class="agent-badge"><span class="agent-dot" style="background:#84cc16"></span>Riley</span>
-            <span class="agent-badge"><span class="agent-dot" style="background:#f97316"></span>Forge</span>
+            <div class="agent-item"><img class="agent-avatar" src="/team/avatars/leo.jpg" alt="Leo" loading="lazy"><span class="agent-name">Leo</span></div>
+            <div class="agent-item"><img class="agent-avatar" src="/team/avatars/nova.jpg" alt="Nova" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="agent-avatar-fallback" style="background:#f59e0b;display:none">N</span><span class="agent-name">Nova</span></div>
+            <div class="agent-item"><img class="agent-avatar" src="/team/avatars/pixel.jpg" alt="Pixel" loading="lazy"><span class="agent-name">Pixel</span></div>
+            <div class="agent-item"><img class="agent-avatar" src="/team/avatars/scout.jpg" alt="Scout" loading="lazy"><span class="agent-name">Scout</span></div>
+            <div class="agent-item"><img class="agent-avatar" src="/team/avatars/maven.jpg" alt="Maven" loading="lazy"><span class="agent-name">Maven</span></div>
+            <div class="agent-item"><img class="agent-avatar" src="/team/avatars/prism.jpg" alt="Prism" loading="lazy"><span class="agent-name">Prism</span></div>
+            <div class="agent-item"><img class="agent-avatar" src="/team/avatars/reeve.jpg" alt="Reeve" loading="lazy"><span class="agent-name">Reeve</span></div>
+            <div class="agent-item"><img class="agent-avatar" src="/team/avatars/riley.jpg" alt="Riley" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="agent-avatar-fallback" style="background:#84cc16;display:none">R</span><span class="agent-name">Riley</span></div>
+            <div class="agent-item"><img class="agent-avatar" src="/team/avatars/forge.jpg" alt="Forge" loading="lazy"><span class="agent-name">Forge</span></div>
           </div>
           <a class="btn" href="https://themeasuringcup.com" target="_blank" rel="noopener">Visit themeasuringcup.com &rarr;</a>
         </div>
